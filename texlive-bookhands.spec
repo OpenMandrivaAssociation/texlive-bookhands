@@ -1,3 +1,9 @@
+# revision 23609
+# category Package
+# catalog-ctan /fonts/bookhands
+# catalog-date 2008-01-03 17:18:54 +0100
+# catalog-license lppl
+# catalog-version undef
 Name:		texlive-bookhands
 Version:	20080103
 Release:	1
@@ -378,6 +384,7 @@ Artificial Uncial (6th-10th centuries); and Insular Majuscule
 %doc %{_texmfdistdir}/source/fonts/bookhands/sqrcaps.ins
 %doc %{_texmfdistdir}/source/fonts/bookhands/uncial.dtx
 %doc %{_texmfdistdir}/source/fonts/bookhands/uncial.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -388,3 +395,5 @@ Artificial Uncial (6th-10th centuries); and Insular Majuscule
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
