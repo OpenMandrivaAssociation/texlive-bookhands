@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-bookhands
 Version:	20170414
-Release:	1
+Release:	2
 Summary:	A collection of book-hand fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/bookhands
