@@ -1,6 +1,6 @@
 Name:		texlive-bookhands
-Version:	46480
-Release:	2
+Version:	76790
+Release:	1
 Summary:	A collection of book-hand fonts
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/fonts/bookhands
