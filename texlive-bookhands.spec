@@ -13,7 +13,8 @@ Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/bookhands.doc.r%
 Source2:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/bookhands.source.r%{tl_revision}.tar.xz
 BuildArch:	noarch
 BuildSystem:	texlive
-Provides:	texlive(%{tl_name}) = %{tl_revision}
+Requires:	texlive-tlpkg
+Provides:	texlive(%{tl_name}) = %{version}
 
 %description
 This is a set of book-hand (Metafont) fonts and packages covering
@@ -27,3 +28,10 @@ Textura Prescisus vel sine pedibus (13th century onwards); Rotunda
 (3rd-6th centuries); Half Uncial (3rd-9th centuries); Artificial Uncial
 (6th-10th centuries); and Insular Majuscule (6th-9th centuries).
 
+
+%install -a
+mkdir -p %{buildroot}%{_texmf_updmap_d}
+cat > %{buildroot}%{_texmf_updmap_d}/%{tl_name} <<'TL_DROPIN_EOF'
+# from bookhands:
+Map sqrcaps.map
+TL_DROPIN_EOF
